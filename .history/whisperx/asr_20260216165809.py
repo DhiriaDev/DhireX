@@ -282,8 +282,7 @@ class FasterWhisperPipeline(Pipeline):
         if self.suppress_numerals:
             self.options = replace(self.options, suppress_tokens=previous_suppress_tokens)
         
-        print(f"VAD segments: {len(vad_segments)}")
-        
+        print()
         return {"segments": segments, "language": language, "vad_segments": vad_segments}
 
     def detect_language(self, audio: np.ndarray) -> str:
